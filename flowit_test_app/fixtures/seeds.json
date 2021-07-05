@@ -1,0 +1,140 @@
+[
+  {
+    "model": "flowit_test_app.employee",
+    "pk": 1,
+    "fields": {
+      "name": "Frank",
+      "email": "frank@example.com"
+    }
+  },
+
+  {
+    "model": "flowit_test_app.product",
+    "pk": 1,
+    "fields": {
+      "name": "Product 1",
+      "barcode": ""
+    }
+  },
+  {
+    "model": "flowit_test_app.product",
+    "pk": 2,
+    "fields": {
+      "name": "Product 2",
+      "barcode": ""
+    }
+  },
+  {
+    "model": "flowit_test_app.product",
+    "pk": 3,
+    "fields": {
+      "name": "Product 3",
+      "barcode": ""
+    }
+  },
+  {
+    "model": "flowit_test_app.product",
+    "pk": 4,
+    "fields": {
+      "name": "Product 4",
+      "barcode": ""
+    }
+  },
+
+  {
+    "model": "flowit_test_app.customer",
+    "pk": 1,
+    "fields": {
+      "name": "Customer Bob",
+      "address": "SomeStreet 1, PC-123456, Country"
+    }
+  },
+  {
+    "model": "flowit_test_app.customer",
+    "pk": 2,
+    "fields": {
+      "name": "Customer John",
+      "address": "SomeStreet 2, PC-123456, Country"
+    }
+  },
+  {
+    "model": "flowit_test_app.customer",
+    "pk": 3,
+    "fields": {
+      "name": "Customer Nancy",
+      "address": "SomeStreet 3, PC-123456, Country"
+    }
+  },
+  {
+    "model": "flowit_test_app.customer",
+    "pk": 4,
+    "fields": {
+      "name": "Customer Jill",
+      "address": "SomeStreet 4, PC-123456, Country"
+    }
+  },
+
+  {
+    "model": "flowit_test_app.order",
+    "pk": 1,
+    "fields": {
+      "customer": 1,
+      "created_at": "2021-07-05T19:57:34.232Z"
+    }
+  },
+  {
+    "model": "flowit_test_app.order",
+    "pk": 2,
+    "fields": {
+      "customer": 2,
+      "created_at": "2021-07-05T20:02:15.742Z"
+    }
+  },
+
+  {
+    "model": "flowit_test_app.orderproduct",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "flowit_test_app.orderproduct",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 2,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "flowit_test_app.orderproduct",
+    "pk": 3,
+    "fields": {
+      "order": 1,
+      "product": 3,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "flowit_test_app.orderproduct",
+    "pk": 4,
+    "fields": {
+      "order": 1,
+      "product": 4,
+      "quantity": 1
+    }
+  },
+
+  {
+    "model": "flowit_test_app.orderproduct",
+    "pk": 5,
+    "fields": {
+      "order": 2,
+      "product": 1,
+      "quantity": 2
+    }
+  }
+]
