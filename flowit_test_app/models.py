@@ -1,4 +1,5 @@
 from django.core.validators import validate_email
+from django.utils import timezone
 from django.db import models
 
 class Employee(models.Model):
@@ -25,6 +26,7 @@ class Customer(models.Model):
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product, through='OrderProduct')
+    created_at = models.DateTimeField(default=timezone.now)
 
 class OrderProduct(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
