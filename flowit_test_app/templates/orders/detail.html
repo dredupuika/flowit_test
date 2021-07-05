@@ -1,0 +1,27 @@
+<h1>Order:{{ order.id }}</h1>
+<h5>Customer: {{ order.customer }}</h5>
+<h5>Created: {{ order.created_at }}</h5>
+
+{% if product_list %}
+  <h2>Products:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Barcode</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for order_product in product_list %}
+        <tr>
+          <td>{{ order_product.product }}</td>
+          <td>{{ order_product.quantity }}</td>
+          <td>{{ order_product.product.barcode }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No products are available.</p>
+{% endif %}
