@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Products List</h1>
+    {% if product_list %}
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Barcode</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in product_list %}
+            <tr>
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td><img src="/media/{{ product.barcode_image }}" alt="{{ product.barcode }}"></td>
+              <td><a href="{% url 'detail' product.id %}">View</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No products are available.</p>
+    {% endif %}
+
+  </body>
+</html>
