@@ -11,4 +11,5 @@ urlpatterns = [
 
     path('products/', product_views.index, name='products_index'),
     path('products/<int:product_id>/', product_views.detail, name='products_detail'),
+    path('products/<int:product_id>/update', product_views.update, name='products_update'),
 ]
