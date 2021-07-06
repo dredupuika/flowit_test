@@ -17,7 +17,7 @@
         <tr>
           <td>{{ order_product.product }}</td>
           <td>{{ order_product.quantity }}</td>
-          <td>{{ order_product.product.barcode }}</td>
+          <td><img src="/media/{{ order_product.product.barcode_image }}" alt="{{ order_product.product.barcode }}"></td>
         </tr>
       {% endfor %}
     </tbody>

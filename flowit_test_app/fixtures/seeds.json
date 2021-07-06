@@ -13,7 +13,7 @@
     "pk": 1,
     "fields": {
       "name": "Product 1",
-      "barcode": ""
+      "barcode": "barcode"
     }
   },
   {
@@ -21,7 +21,7 @@
     "pk": 2,
     "fields": {
       "name": "Product 2",
-      "barcode": ""
+      "barcode": "barcode"
     }
   },
   {
@@ -29,7 +29,7 @@
     "pk": 3,
     "fields": {
       "name": "Product 3",
-      "barcode": ""
+      "barcode": "barcode"
     }
   },
   {
@@ -37,7 +37,7 @@
     "pk": 4,
     "fields": {
       "name": "Product 4",
-      "barcode": ""
+      "barcode": "barcode"
     }
   },
 
