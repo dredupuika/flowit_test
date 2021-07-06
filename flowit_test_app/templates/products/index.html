@@ -22,7 +22,7 @@
               <td>{{ product.id }}</td>
               <td>{{ product.name }}</td>
               <td><img src="/media/{{ product.barcode_image }}" alt="{{ product.barcode }}"></td>
-              <td><a href="{% url 'detail' product.id %}">View</a></td>
+              <td><a href="{% url 'products_detail' product.id %}">View</a></td>
             </tr>
           {% endfor %}
         </tbody>
