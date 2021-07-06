@@ -1,6 +1,8 @@
-<h1>Order:{{ order.id }}</h1>
+<h1>Order: {{ order.id }}</h1>
 <h5>Customer: {{ order.customer }}</h5>
 <h5>Created: {{ order.created_at }}</h5>
+
+<h1>Address: {{ order.customer.address }}</h1>
 
 {% if product_list %}
   <h2>Products:</h2>
