@@ -16,6 +16,7 @@
             <th>Created at</th>
             <th>Link</th>
             <th>Pdf</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
@@ -27,6 +28,7 @@
               <td>{{ order.created_at }}</td>
               <td><a href="{% url 'detail' order.id %}">View order</a></td>
               <td><a href="{% url 'pdf' order.id %}">Download</a></td>
+              <td><a href="{% url 'email_pdf' order.id %}">Send to email</a></td>
             </tr>
           {% endfor %}
         </tbody>
