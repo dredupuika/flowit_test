@@ -1,10 +1,13 @@
 from django.urls import path
 
+from . import views
 from . import order_views
 from . import product_views
 from . import employee_views
 
 urlpatterns = [
+    path('', views.index, name='root'),
+
     path('orders/', order_views.index, name='orders_index'),
     path('orders/<int:order_id>/', order_views.detail, name='orders_detail'),
     path('orders/<int:order_id>/pdf', order_views.pdf, name='orders_pdf'),
