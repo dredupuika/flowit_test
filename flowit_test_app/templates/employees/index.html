@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Employees List</h1>
+
+    {% if employee_list %}
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Barcode</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for employee in employee_list %}
+            <tr>
+              <td>{{ employee.id }}</td>
+              <td>{{ employee.name }}</td>
+              <td>{{ employee.email }}</td>
+              <td><a href="{% url 'employees_detail' employee.id %}">Edit</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No employees are available.</p>
+    {% endif %}
+
+  </body>
+</html>
