@@ -6,7 +6,7 @@
   </head>
   <body>
     {% if filter %}
-      <form action="{% url 'products_index' %}" method="get">
+      <form action="{% url 'orders_detail' order.id %}" method="get">
       {% csrf_token %}
       <div class="form-group">
         <label for="name">Name:</label>

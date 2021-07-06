@@ -16,8 +16,8 @@ def index(request):
 
         filter = {'name': request.GET['name'], 'barcode': request.GET['barcode'],}
     else:
-        filter = {'name': None, 'barcode': None,}
-        
+        filter = {'name': '', 'barcode': '',}
+
     return render(request, 'products/index.html', {'product_list': product_list, 'filter': filter})
 
 def detail(request, product_id):

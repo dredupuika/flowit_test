@@ -22,14 +22,14 @@ def detail(request, order_id):
 
     if request.GET:
         if request.GET['name']:
-            product_list = product_list.filter(name=request.GET['name'])
+            product_list = product_list.select_related('product').filter(product__name=request.GET['name'])
 
         if request.GET['barcode']:
-            product_list = product_list.filter(barcode=request.GET['barcode'])
+            product_list = product_list.select_related('product').filter(product__barcode=request.GET['barcode'])
 
         filter = {'name': request.GET['name'], 'barcode': request.GET['barcode'],}
     else:
-        filter = {'name': None, 'barcode': None,}
+        filter = {'name': '', 'barcode': '',}
 
     return render(request, 'orders/detail.html', {'order': order,'product_list':product_list, 'filter':filter})
 
