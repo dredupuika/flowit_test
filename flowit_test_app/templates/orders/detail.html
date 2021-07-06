@@ -5,6 +5,22 @@
     <title></title>
   </head>
   <body>
+    {% if filter %}
+      <form action="{% url 'products_index' %}" method="get">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{ filter.name }}">
+      </div>
+      <div class="form-group">
+        <label for="barcode">Barcode:</label>
+        <input type="text" name="barcode" id="barcode" value="{{ filter.barcode }}">
+      </div>
+    {% endif %}
+
+    <input type="submit" value="Filter">
+    </form>
+
     <h1>Order: {{ order.id }}</h1>
     <h5>Customer: {{ order.customer }}</h5>
     <h5>Created: {{ order.created_at }}</h5>

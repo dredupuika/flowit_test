@@ -19,7 +19,19 @@ def detail(request, order_id):
         product_list = order.orderproduct_set.all()
     except Order.DoesNotExist:
         raise Http404("Order does not exist")
-    return render(request, 'orders/detail.html', {'order': order,'product_list':product_list,})
+
+    if request.GET:
+        if request.GET['name']:
+            product_list = product_list.filter(name=request.GET['name'])
+
+        if request.GET['barcode']:
+            product_list = product_list.filter(barcode=request.GET['barcode'])
+
+        filter = {'name': request.GET['name'], 'barcode': request.GET['barcode'],}
+    else:
+        filter = {'name': None, 'barcode': None,}
+
+    return render(request, 'orders/detail.html', {'order': order,'product_list':product_list, 'filter':filter})
 
 def pdf(request, order_id):
     try:
